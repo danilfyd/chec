@@ -27,11 +27,32 @@ footer{padding:35px 0 55px;color:var(--muted);font-size:13px;text-align:center}
 @media(max-width:760px){.navin{flex-wrap:wrap;padding:10px 20px}.navlinks{width:100%;justify-content:center}.navlinks a:not(.cta-link){display:none}.grid,.prices{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.price.featured{transform:none}.hero{padding-top:55px}.hero p{font-size:17px}}
 @media(max-width:430px){.steps{grid-template-columns:1fr}.navin{min-height:58px}.btn{padding:12px 15px}.navlinks{gap:8px}}
 </style>
-</head>
+<style>
+.qr-demo-inner{--bg:#f7f5f0;--card:#fff;--text:#20231f;--muted:#777a72;--accent:#176b45;--accent2:#d99a36;--line:#e9e5dc}
+*{box-sizing:border-box}.qr-demo-inner{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
+.qr-header{background:linear-gradient(145deg,#123f2c,#1d6a48);color:white;padding:28px 18px 24px;position:relative;overflow:hidden}
+.qr-header:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-70px;top:-80px;background:rgba(255,255,255,.07)}
+.qr-top{max-width:720px;margin:auto;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.qr-logo{font-family:Georgia,serif;font-size:25px;letter-spacing:1px}.qr-langs button{border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;border-radius:20px;padding:7px 10px;margin-left:4px;cursor:pointer;font-size:12px}.qr-langs button.active{background:#fff;color:#176b45}
+.qr-hero{max-width:720px;margin:30px auto 0;position:relative;z-index:2}.qr-hero h1{font:700 42px Georgia,serif;margin:0 0 8px}.qr-hero p{margin:0;color:#dbe9e1;max-width:500px;line-height:1.5}
+.qr-info{max-width:720px;margin:-18px auto 0;padding:0 14px;position:relative;z-index:4}.qr-infoBox{background:#fff;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.08);padding:15px 18px;display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap;font-size:13px}.qr-infoBox span{color:var(--muted)}
+.qr-wrap{max-width:720px;margin:22px auto;padding:0 14px 100px}.qr-cats{display:flex;gap:9px;overflow:auto;padding:2px 0 14px;scrollbar-width:none}.qr-cats button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:22px;padding:10px 15px;color:#666;cursor:pointer}.qr-cats button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.qr-sectionTitle{font:700 25px Georgia,serif;margin:18px 0 13px}.qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.qr-item{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(20,30,20,.06);border:1px solid #eeeae2}.qr-photo{height:155px;background-size:cover;background-position:center}.qr-body{padding:13px}.qr-name{font-weight:700;font-size:16px;margin-bottom:5px}.qr-desc{font-size:12px;color:var(--muted);line-height:1.4;min-height:34px}.qr-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.qr-price{font-weight:800;color:var(--accent)}.qr-order{background:#f0f6f2;border:0;color:var(--accent);border-radius:12px;padding:8px 10px;font-size:12px;cursor:pointer}
+.qr-note{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:22px}.qr-note strong{display:block;margin-bottom:6px}.qr-note p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.qr-footer{max-width:720px;margin:auto;padding:25px 14px 45px;text-align:center;color:#888;font-size:12px}.qr{display:inline-flex;width:42px;height:42px;border:3px solid #222;border-radius:5px;align-items:center;justify-content:center;font-weight:900;font-size:10px;margin-bottom:8px}
+@media(max-width:520px){.qr-hero h1{font-size:34px}.qr-grid{grid-template-columns:1fr}.qr-photo{height:185px}.qr-infoBox{gap:10px}.qr-logo{font-size:21px}}
+
+.qr-demo-box{max-width:720px;margin:28px auto 24px;background:#fff;border:1px solid #e8e3da;border-radius:28px;overflow:hidden;box-shadow:0 18px 55px rgba(30,25,15,.12)}
+.qr-demo-inner{width:100%;overflow:hidden}
+.qr-demo-inner .qr-header{padding:22px 18px 20px}
+.qr-demo-inner .qr-hero h1{font-size:32px}
+.qr-demo-inner .qr-wrap{padding-bottom:28px}
+@media(max-width:520px){.qr-demo-inner .qr-grid{grid-template-columns:1fr}}
+</style></head>
 <body>
 <nav><div class="wrap navin"><div class="logo">QR MENU</div>
 <div class="navlinks">
-<a href="#how" data-t="navHow">How it works</a><a href="#prices" data-t="navPrices">Prices</a>
+<a href="#how" data-t="navHow">How it works</a><a href="#example" data-t="navExample">Example</a><a href="#prices" data-t="navPrices">Prices</a>
 <div class="lang"><button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button><button data-lang="vi">VI</button></div>
 <a class="btn cta-link" href="#contact" data-t="navDemo">Get demo</a>
 </div></div></nav>
@@ -54,6 +75,87 @@ footer{padding:35px 0 55px;color:var(--muted);font-size:13px;text-align:center}
 <div class="card"><div class="icon">🖨️</div><h3 data-t="c6t">Ready QR code</h3><p data-t="c6p">Place the QR code on tables, at the counter or entrance.</p></div>
 </div></div></section>
 
+
+<section id="example">
+  <div class="wrap center">
+    <div class="eyebrow" data-t="exampleEyebrow">Live example</div>
+    <h2 data-t="exampleTitle">See what your QR menu can look like.</h2>
+    <p class="sub" data-t="exampleSub">This is a ready-made demo. We replace the name, logo, photos, dishes, prices and contacts with your restaurant information.</p>
+    <div class="qr-demo-box">
+      <div class="qr-demo-inner">
+<header class="qr-header">
+  <div class="qr-top">
+    <div class="qr-logo">SAIGON GARDEN</div>
+    <div class="qr-langs">
+      <button class="active">VI</button>
+      <button>EN</button>
+      <button>RU</button>
+    </div>
+  </div>
+  <div class="qr-hero">
+    <h1 data-vi="Hương vị Việt, theo cách hiện đại." data-en="Vietnamese taste, served modern." data-ru="Вкус Вьетнама — современная подача.">Hương vị Việt, theo cách hiện đại.</h1>
+    <p data-vi="Nhà hàng Việt Nam với nguyên liệu tươi, món ăn gia đình và cocktail nhiệt đới."
+       data-en="Vietnamese cuisine with fresh ingredients, comfort food and tropical cocktails."
+       data-ru="Вьетнамская кухня, свежие продукты, домашние блюда и тропические коктейли.">Nhà hàng Việt Nam với nguyên liệu tươi, món ăn gia đình và cocktail nhiệt đới.</p>
+  </div>
+</header>
+
+<div class="qr-info"><div class="qr-infoBox">
+  <div>📍 <span data-vi="Nha Trang" data-en="Nha Trang" data-ru="Нячанг">Nha Trang</span></div>
+  <div>🕐 <span data-vi="10:00 — 23:00" data-en="10:00 — 23:00" data-ru="10:00 — 23:00">10:00 — 23:00</span></div>
+  <div>☎️ <span>+84 337 404 600</span></div>
+</div></div>
+
+<main class="qr-wrap">
+  <div class="qr-cats">
+    <button class="active" data-cat="all" data-vi="Tất cả" data-en="All" data-ru="Все">Tất cả</button>
+    <button data-cat="starter" data-vi="Khai vị" data-en="Starters" data-ru="Закуски">Khai vị</button>
+    <button data-cat="main" data-vi="Món chính" data-en="Main dishes" data-ru="Основные блюда">Món chính</button>
+    <button data-cat="drink" data-vi="Đồ uống" data-en="Drinks" data-ru="Напитки">Đồ uống</button>
+  </div>
+
+  <h2 class="qr-sectionTitle" data-vi="Được yêu thích" data-en="Popular choices" data-ru="Популярное">Được yêu thích</h2>
+  <div class="qr-grid">
+    <article class="qr-item" data-type="starter">
+      <div class="qr-photo" style="background-image:url('https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="qr-body"><div class="qr-name" data-vi="Gỏi cuốn tôm" data-en="Fresh shrimp rolls" data-ru="Свежие роллы с креветкой">Gỏi cuốn tôm</div><div class="qr-desc" data-vi="Bánh tráng, tôm, rau thơm, bún và sốt đậu phộng." data-en="Rice paper, shrimp, herbs, noodles and peanut sauce." data-ru="Рисовая бумага, креветки, зелень, лапша и арахисовый соус.">Bánh tráng, tôm, rau thơm, bún và sốt đậu phộng.</div><div class="qr-bottom"><span class="qr-price">95.000 ₫</span><button class="qr-order">+</button></div></div>
+    </article>
+
+    <article class="qr-item" data-type="main">
+      <div class="qr-photo" style="background-image:url('https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="qr-body"><div class="qr-name" data-vi="Phở bò đặc biệt" data-en="Special beef pho" data-ru="Фо бо специальный">Phở bò đặc biệt</div><div class="qr-desc" data-vi="Nước dùng ninh 12 giờ, bò tái, gầu và bánh phở." data-en="12-hour broth, rare beef, brisket and rice noodles." data-ru="Бульон 12 часов, говядина, грудинка и рисовая лапша.">Nước dùng ninh 12 giờ, bò tái, gầu và bánh phở.</div><div class="qr-bottom"><span class="qr-price">135.000 ₫</span><button class="qr-order">+</button></div></div>
+    </article>
+
+    <article class="qr-item" data-type="main">
+      <div class="qr-photo" style="background-image:url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="qr-body"><div class="qr-name" data-vi="Cơm tấm sườn nướng" data-en="Grilled pork rice" data-ru="Рис с жареной свининой">Cơm tấm sườn nướng</div><div class="qr-desc" data-vi="Sườn nướng mật ong, cơm tấm, đồ chua và trứng." data-en="Honey-glazed pork ribs, broken rice, pickles and egg." data-ru="Свиные рёбрышки, рис, маринованные овощи и яйцо.">Sườn nướng mật ong, cơm tấm, đồ chua và trứng.</div><div class="qr-bottom"><span class="qr-price">145.000 ₫</span><button class="qr-order">+</button></div></div>
+    </article>
+
+    <article class="qr-item" data-type="drink">
+      <div class="qr-photo" style="background-image:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="qr-body"><div class="qr-name" data-vi="Passion Fruit Mojito" data-en="Passion Fruit Mojito" data-ru="Мохито маракуйя">Passion Fruit Mojito</div><div class="qr-desc" data-vi="Chanh dây, bạc hà, chanh tươi và soda." data-en="Passion fruit, mint, fresh lime and soda." data-ru="Маракуйя, мята, лайм и содовая.">Chanh dây, bạc hà, chanh tươi và soda.</div><div class="qr-bottom"><span class="qr-price">110.000 ₫</span><button class="qr-order">+</button></div></div>
+    </article>
+  </div>
+
+  <div class="qr-note">
+    <strong data-vi="📱 Đặt món thật dễ" data-en="📱 Easy ordering" data-ru="📱 Заказать очень просто">📱 Đặt món thật dễ</strong>
+    <p data-vi="Quét QR tại bàn → chọn món → gọi nhân viên. Menu hoạt động trên điện thoại và không cần cài ứng dụng."
+       data-en="Scan the QR at your table → choose your dishes → call a waiter. Works on any phone with no app."
+       data-ru="Сканируете QR на столе → выбираете блюда → зовёте официанта. Работает на любом телефоне без приложения.">Quét QR tại bàn → chọn món → gọi nhân viên. Menu hoạt động trên điện thoại và không cần cài ứng dụng.</p>
+  </div>
+</main>
+
+
+
+
+</div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="#contact" data-t="exampleContact">Make one for my restaurant</a>
+    </div>
+  </div>
+</section>
+
 <section id="how"><div class="wrap center"><div class="eyebrow" data-t="howEyebrow">How it works</div><h2 data-t="howTitle">From your menu to a QR code — 4 steps.</h2>
 <div class="steps"><div class="step"><div class="num">01</div><h3 data-t="s1t">Send your menu</h3><p data-t="s1p">Photos, PDF, text or your existing menu.</p></div><div class="step"><div class="num">02</div><h3 data-t="s2t">We build the page</h3><p data-t="s2p">We add dishes, prices, photos and languages.</p></div><div class="step"><div class="num">03</div><h3 data-t="s3t">You review it</h3><p data-t="s3p">We make corrections before launch.</p></div><div class="step"><div class="num">04</div><h3 data-t="s4t">Get your QR</h3><p data-t="s4p">Put it on tables and start using it.</p></div></div></div></section>
 
@@ -71,8 +173,8 @@ footer{padding:35px 0 55px;color:var(--muted);font-size:13px;text-align:center}
 <script>
 const T={
 ru:{
-navHow:"Как работает",navPrices:"Цены",navDemo:"Получить демо",badge:"Для ресторанов • кафе • баров • отелей",
-heroTitle:"Ваше меню — прямо в телефоне гостя.",heroText:"Красивое электронное меню по QR-коду. Без приложений, лишней печати и долгого ожидания.",heroBtn:"Получить бесплатное демо",priceBtn:"Посмотреть тарифы",sampleMenu:"Меню",
+navHow:"Как работает",navExample:"Пример",navPrices:"Цены",navDemo:"Получить демо",badge:"Для ресторанов • кафе • баров • отелей",
+heroTitle:"Ваше меню — прямо в телефоне гостя.",heroText:"Красивое электронное меню по QR-коду. Без приложений, лишней печати и долгого ожидания.",heroBtn:"Получить бесплатное демо",exampleBtn:"Посмотреть пример",priceBtn:"Посмотреть тарифы",sampleMenu:"Меню",
 dish1:"Паста с морепродуктами",dish2:"Стейк из говядины",dish3:"Свежие спринг-роллы",dish4:"Манговый смузи",
 whyEyebrow:"Почему QR MENU",whyTitle:"Проще для гостя. Удобнее для бизнеса.",whySub:"Один QR-код превращает столик в точку доступа к актуальному меню.",
 c1t:"Открывается сразу",c1p:"Гость сканирует QR-код камерой телефона — приложение не требуется.",c2t:"Несколько языков",c2p:"Русский, Vietnamese и English — удобно для туристов и местных гостей.",c3t:"Легко обновлять",c3p:"Изменились цены или блюда? Не нужно перепечатывать всё меню.",c4t:"Фото и описания",c4p:"Покажите блюдо так, чтобы гостю было проще выбрать.",c5t:"Ваш стиль",c5p:"Цвета, логотип и оформление можно адаптировать под ваше заведение.",c6t:"Готовый QR-код",c6p:"Размещайте QR-код на столах, стойке или у входа.",
@@ -82,7 +184,7 @@ p1:"До 30 позиций",p2:"1 язык",p3:"Мобильное меню",p4:
 ctaEyebrow:"Бесплатный демо-вариант",ctaTitle:"Хотите увидеть своё меню на телефоне?",ctaText:"Отправьте нам ваше текущее меню. Мы покажем, как несколько ваших блюд будут выглядеть в электронном QR-меню.",wa:"WhatsApp — получить демо",zalo:"Zalo — получить демо",footer:"QR MENU • Электронные меню для ресторанов, кафе и баров"
 },
 en:{
-navHow:"How it works",navPrices:"Prices",navDemo:"Get demo",badge:"For restaurants • cafés • bars • hotels",heroTitle:"Your menu — right on your guest's phone.",heroText:"A beautiful electronic menu opened by QR code. No app, unnecessary printing or waiting.",heroBtn:"Get a free demo",priceBtn:"View prices",sampleMenu:"Menu",
+navHow:"How it works",navExample:"Example",navPrices:"Prices",navDemo:"Get demo",badge:"For restaurants • cafés • bars • hotels",heroTitle:"Your menu — right on your guest's phone.",heroText:"A beautiful electronic menu opened by QR code. No app, unnecessary printing or waiting.",heroBtn:"Get a free demo",exampleBtn:"See live example",priceBtn:"View prices",sampleMenu:"Menu",
 dish1:"Seafood Pasta",dish2:"Beef Steak",dish3:"Fresh Spring Rolls",dish4:"Mango Smoothie",
 whyEyebrow:"Why QR MENU",whyTitle:"Easier for guests. Better for your business.",whySub:"One QR code turns your table into instant access to an up-to-date menu.",
 c1t:"Opens instantly",c1p:"Guests scan the QR code with their phone camera — no app required.",c2t:"Multiple languages",c2p:"Russian, Vietnamese and English — convenient for tourists and local guests.",c3t:"Easy to update",c3p:"Changed a price or dish? No need to reprint the whole menu.",c4t:"Photos & descriptions",c4p:"Show your dishes clearly and help guests choose.",c5t:"Your style",c5p:"Colors, logo and design can match your restaurant.",c6t:"Ready QR code",c6p:"Place the QR code on tables, at the counter or entrance.",
@@ -91,8 +193,8 @@ priceEyebrow:"Prices",priceTitle:"Choose the right format.",priceSub:"Start with
 ctaEyebrow:"Free demo",ctaTitle:"Want to see your menu on a phone?",ctaText:"Send us your current menu. We'll show you how a few of your dishes can look in an electronic QR menu.",wa:"WhatsApp — get demo",zalo:"Zalo — get demo",footer:"QR MENU • Electronic menus for restaurants, cafés & bars"
 },
 vi:{
-navHow:"Cách hoạt động",navPrices:"Bảng giá",navDemo:"Nhận demo",badge:"Dành cho nhà hàng • quán cà phê • quán bar • khách sạn",
-heroTitle:"Menu của bạn — ngay trên điện thoại của khách.",heroText:"Menu điện tử đẹp mắt bằng QR code. Không cần tải ứng dụng, không phải in lại nhiều lần.",heroBtn:"Nhận demo miễn phí",priceBtn:"Xem bảng giá",sampleMenu:"Menu",
+navHow:"Cách hoạt động",navExample:"Ví dụ",navPrices:"Bảng giá",navDemo:"Nhận demo",badge:"Dành cho nhà hàng • quán cà phê • quán bar • khách sạn",
+heroTitle:"Menu của bạn — ngay trên điện thoại của khách.",heroText:"Menu điện tử đẹp mắt bằng QR code. Không cần tải ứng dụng, không phải in lại nhiều lần.",heroBtn:"Nhận demo miễn phí",exampleBtn:"Xem menu mẫu",priceBtn:"Xem bảng giá",sampleMenu:"Menu",
 dish1:"Mì hải sản",dish2:"Bít tết bò",dish3:"Gỏi cuốn tươi",dish4:"Sinh tố xoài",
 whyEyebrow:"Tại sao QR MENU",whyTitle:"Dễ hơn cho khách. Tiện hơn cho doanh nghiệp.",whySub:"Một QR code giúp khách truy cập ngay vào menu mới nhất.",
 c1t:"Mở ngay lập tức",c1p:"Khách chỉ cần quét QR bằng camera điện thoại — không cần cài ứng dụng.",c2t:"Nhiều ngôn ngữ",c2p:"Tiếng Việt, English và Русский — phù hợp với khách du lịch và khách địa phương.",c3t:"Dễ cập nhật",c3p:"Thay đổi giá hoặc món ăn? Không cần in lại toàn bộ menu.",c4t:"Hình ảnh & mô tả",c4p:"Hiển thị món ăn rõ ràng để khách dễ lựa chọn.",c5t:"Theo phong cách của bạn",c5p:"Màu sắc, logo và thiết kế có thể phù hợp với nhà hàng của bạn.",c6t:"QR code sẵn sàng",c6p:"Đặt QR code trên bàn, quầy hoặc lối vào.",
@@ -104,10 +206,55 @@ function setLang(lang){
 document.documentElement.lang=lang;
 document.querySelectorAll("[data-t]").forEach(el=>{const k=el.dataset.t;if(T[lang][k]!==undefined)el.textContent=T[lang][k]});
 document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
-localStorage.setItem("qrmenu-lang",lang);
+localStorage.setItem("qrmenu-lang",lang); if(window.syncQrDemo) window.syncQrDemo(lang);
 }
 document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 setLang(localStorage.getItem("qrmenu-lang")||"ru");
 </script>
+
+<script id="exampleLangPatch">
+(function(){
+  const T={
+    ru:{navExample:"Пример",exampleEyebrow:"Готовый пример",exampleTitle:"Посмотрите, как может выглядеть ваше QR-меню.",exampleSub:"Это готовое демо. Мы заменим название, логотип, фотографии, блюда, цены и контакты на данные вашего заведения.",exampleContact:"Сделать такое для моего ресторана"},
+    en:{navExample:"Example",exampleEyebrow:"Live example",exampleTitle:"See what your QR menu can look like.",exampleSub:"This is a ready-made demo. We replace the name, logo, photos, dishes, prices and contacts with your restaurant information.",exampleContact:"Make one for my restaurant"},
+    vi:{navExample:"Ví dụ",exampleEyebrow:"Ví dụ thực tế",exampleTitle:"Xem menu QR của bạn có thể trông như thế nào.",exampleSub:"Đây là bản demo hoàn chỉnh. Chúng tôi sẽ thay tên, logo, hình ảnh, món ăn, giá và liên hệ bằng thông tin của nhà hàng bạn.",exampleContact:"Làm menu cho nhà hàng của tôi"}
+  };
+  window.applyExampleLanguage=function(lang){
+    const d=T[lang]||T.en;
+    document.querySelectorAll('#example [data-t]').forEach(el=>{if(d[el.getAttribute('data-t')])el.textContent=d[el.getAttribute('data-t')];});
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    let lang=localStorage.getItem('lang')||localStorage.getItem('language')||'en';
+    applyExampleLanguage(lang);
+    document.querySelectorAll('[data-lang],.lang-btn,.language-btn').forEach(b=>b.addEventListener('click',function(){setTimeout(function(){applyExampleLanguage(localStorage.getItem('lang')||localStorage.getItem('language')||'en')},50)}));
+  });
+})();
+</script>
+
+<script id="qrDemoLanguageSync">
+(function(){
+  function sync(lang){
+    const root=document.querySelector('#example .qr-demo-inner');
+    if(!root) return;
+    lang = (lang==='ru'||lang==='en'||lang==='vi') ? lang : 'ru';
+    root.querySelectorAll('[data-'+lang+']').forEach(el=>{
+      el.textContent = el.getAttribute('data-'+lang);
+    });
+    // Elements without a language-specific attribute keep their current text.
+    root.querySelectorAll('.qr-langs button').forEach(b=>{
+      b.classList.toggle('active', b.textContent.trim().toLowerCase()===lang);
+    });
+    // Keep the demo's own language buttons visual only; the main site controls language.
+    root.querySelectorAll('.qr-langs button').forEach(b=>{
+      b.onclick=function(e){e.preventDefault(); sync(lang);};
+    });
+  }
+  window.syncQrDemo=sync;
+  document.addEventListener('DOMContentLoaded',function(){
+    sync(localStorage.getItem('qrmenu-lang')||'ru');
+  });
+})();
+</script>
+
 </body>
 </html>
