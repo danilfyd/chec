@@ -3,74 +3,111 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>QR MENU — Электронное меню для ресторана</title>
-<meta name="description" content="Красивое QR-меню для ресторанов, кафе и баров. Русский, английский и вьетнамский языки.">
+<title>QR MENU — Electronic Menu for Restaurants</title>
+<meta name="description" content="QR menu for restaurants, cafés and bars. Russian, English and Vietnamese.">
 <style>
 :root{--bg:#f7f3ec;--card:#fffdf9;--ink:#211d19;--muted:#756d64;--accent:#b36a32;--line:#e7ddd1;--dark:#24201c}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
 .wrap{max-width:1050px;margin:auto;padding:0 20px}
 nav{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.navin{height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;letter-spacing:.14em}.navin a{color:var(--ink);text-decoration:none;font-size:14px;margin-left:20px}
-.btn{display:inline-block;background:var(--dark);color:white!important;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:700}
-.hero{padding:72px 0 52px;text-align:center}
-.badge{display:inline-block;border:1px solid var(--line);padding:7px 12px;border-radius:99px;color:var(--muted);font-size:13px;background:var(--card)}
-h1{font-size:clamp(42px,8vw,78px);line-height:.98;margin:20px auto 18px;max-width:850px;letter-spacing:-.045em}
-.hero p{font-size:19px;color:var(--muted);max-width:670px;margin:0 auto 28px}
-.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn.light{background:var(--card)!important;color:var(--ink)!important;border:1px solid var(--line)}
-.mock{margin:42px auto 0;max-width:420px;background:var(--dark);padding:14px;border-radius:30px;box-shadow:0 25px 60px rgba(40,30,20,.18)}
-.phone{background:#fffaf4;border-radius:20px;padding:25px;text-align:left}
-.phone .mini{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em}
-.phone h3{font-size:27px;margin:7px 0 16px}.dish{padding:13px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.dish b{white-space:nowrap}
-section{padding:65px 0}.center{text-align:center}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
-h2{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:9px 0 15px;letter-spacing:-.03em}.sub{color:var(--muted);max-width:650px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.icon{font-size:28px}.card h3{margin:11px 0 6px}.card p{color:var(--muted);margin:0}
+.navin{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:15px}.logo{font-weight:900;letter-spacing:.14em}
+.navlinks{display:flex;align-items:center;gap:18px}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px}
+.lang{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);padding:4px;border-radius:10px}.lang button{border:0;background:transparent;padding:7px 9px;border-radius:7px;cursor:pointer;font-weight:800;font-size:12px;color:var(--muted)}.lang button.active{background:var(--dark);color:white}
+.btn{display:inline-block;background:var(--dark);color:white!important;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:700;border:0;cursor:pointer}
+.hero{padding:72px 0 52px;text-align:center}.badge{display:inline-block;border:1px solid var(--line);padding:7px 12px;border-radius:99px;color:var(--muted);font-size:13px;background:var(--card)}
+h1{font-size:clamp(42px,8vw,78px);line-height:.98;margin:20px auto 18px;max-width:850px;letter-spacing:-.045em}.hero p{font-size:19px;color:var(--muted);max-width:670px;margin:0 auto 28px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.btn.light{background:var(--card)!important;color:var(--ink)!important;border:1px solid var(--line)}
+.mock{margin:42px auto 0;max-width:420px;background:var(--dark);padding:14px;border-radius:30px;box-shadow:0 25px 60px rgba(40,30,20,.18)}.phone{background:#fffaf4;border-radius:20px;padding:25px;text-align:left}.phone .mini{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em}.phone h3{font-size:27px;margin:7px 0 16px}.dish{padding:13px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.dish b{white-space:nowrap}
+section{padding:65px 0}.center{text-align:center}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}h2{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:9px 0 15px;letter-spacing:-.03em}.sub{color:var(--muted);max-width:650px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.icon{font-size:28px}.card h3{margin:11px 0 6px}.card p{color:var(--muted);margin:0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.num{font-weight:900;font-size:30px;color:var(--accent)}
 .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.price{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}.price.featured{border:2px solid var(--accent);transform:translateY(-5px)}.price h3{margin:0}.cost{font-size:34px;font-weight:900;margin:10px 0}.price ul{padding-left:20px;color:var(--muted)}.price li{margin:7px 0}
 .cta{background:var(--dark);color:white;border-radius:28px;padding:50px 25px;text-align:center}.cta p{color:#d5cec5;max-width:600px;margin:0 auto 25px}.cta .btn{background:#fff;color:var(--dark)!important}
 footer{padding:35px 0 55px;color:var(--muted);font-size:13px;text-align:center}
-@media(max-width:760px){.navin a:not(.btn){display:none}.grid,.prices{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.price.featured{transform:none}.hero{padding-top:55px}.hero p{font-size:17px}}
-@media(max-width:430px){.steps{grid-template-columns:1fr}.navin{height:58px}.btn{padding:12px 15px}}
+@media(max-width:760px){.navin{flex-wrap:wrap;padding:10px 20px}.navlinks{width:100%;justify-content:center}.navlinks a:not(.cta-link){display:none}.grid,.prices{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.price.featured{transform:none}.hero{padding-top:55px}.hero p{font-size:17px}}
+@media(max-width:430px){.steps{grid-template-columns:1fr}.navin{min-height:58px}.btn{padding:12px 15px}.navlinks{gap:8px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap navin"><div class="logo">QR MENU</div><div><a href="#how">Как работает</a><a href="#prices">Цены</a><a class="btn" href="#contact">Получить демо</a></div></div></nav>
+<nav><div class="wrap navin"><div class="logo">QR MENU</div>
+<div class="navlinks">
+<a href="#how" data-t="navHow">How it works</a><a href="#prices" data-t="navPrices">Prices</a>
+<div class="lang"><button data-lang="ru" class="active">RU</button><button data-lang="en">EN</button><button data-lang="vi">VI</button></div>
+<a class="btn cta-link" href="#contact" data-t="navDemo">Get demo</a>
+</div></div></nav>
 
 <header class="hero wrap">
-<span class="badge">Для ресторанов • кафе • баров • отелей</span>
-<h1>Ваше меню — прямо в телефоне гостя.</h1>
-<p>Красивое электронное меню по QR-коду. Без приложений, лишней печати и долгого ожидания.</p>
-<div class="actions"><a class="btn" href="#contact">Получить бесплатное демо</a><a class="btn light" href="#prices">Посмотреть тарифы</a></div>
-<div class="mock"><div class="phone"><div class="mini">Restaurant • Nha Trang</div><h3>Menu</h3><div class="dish"><span>Seafood Pasta</span><b>180K</b></div><div class="dish"><span>Beef Steak</span><b>250K</b></div><div class="dish"><span>Fresh Spring Rolls</span><b>95K</b></div><div class="dish"><span>Mango Smoothie</span><b>70K</b></div></div></div>
+<span class="badge" data-t="badge">For restaurants • cafés • bars • hotels</span>
+<h1 data-t="heroTitle">Your menu — right on your guest's phone.</h1>
+<p data-t="heroText">A beautiful electronic menu opened by QR code. No app, unnecessary printing or waiting.</p>
+<div class="actions"><a class="btn" href="#contact" data-t="heroBtn">Get a free demo</a><a class="btn light" href="#prices" data-t="priceBtn">View prices</a></div>
+<div class="mock"><div class="phone"><div class="mini">Restaurant • Nha Trang</div><h3 data-t="sampleMenu">Menu</h3><div class="dish"><span data-t="dish1">Seafood Pasta</span><b>180K</b></div><div class="dish"><span data-t="dish2">Beef Steak</span><b>250K</b></div><div class="dish"><span data-t="dish3">Fresh Spring Rolls</span><b>95K</b></div><div class="dish"><span data-t="dish4">Mango Smoothie</span><b>70K</b></div></div></div>
 </header>
 
-<section><div class="wrap center"><div class="eyebrow">Почему QR MENU</div><h2>Проще для гостя. Удобнее для бизнеса.</h2><p class="sub">Один QR-код превращает обычный столик в точку доступа к актуальному меню.</p>
+<section><div class="wrap center"><div class="eyebrow" data-t="whyEyebrow">Why QR MENU</div><h2 data-t="whyTitle">Easier for guests. Better for your business.</h2><p class="sub" data-t="whySub">One QR code turns your table into instant access to an up-to-date menu.</p>
 <div class="grid">
-<div class="card"><div class="icon">📱</div><h3>Открывается сразу</h3><p>Гость сканирует QR-код камерой телефона — приложение не требуется.</p></div>
-<div class="card"><div class="icon">🌍</div><h3>Несколько языков</h3><p>Русский, Vietnamese и English — удобно для туристов и местных гостей.</p></div>
-<div class="card"><div class="icon">🔄</div><h3>Легко обновлять</h3><p>Изменились цены или блюда? Не нужно перепечатывать всё меню.</p></div>
-<div class="card"><div class="icon">📸</div><h3>Фото и описания</h3><p>Покажите блюдо так, чтобы гостю было проще выбрать.</p></div>
-<div class="card"><div class="icon">✨</div><h3>Ваш стиль</h3><p>Цвета, логотип и оформление можно адаптировать под ваше заведение.</p></div>
-<div class="card"><div class="icon">🖨️</div><h3>Готовый QR</h3><p>Получаете QR-код, который можно разместить на столах, стойке или у входа.</p></div>
+<div class="card"><div class="icon">📱</div><h3 data-t="c1t">Opens instantly</h3><p data-t="c1p">Guests scan the QR code with their phone camera — no app required.</p></div>
+<div class="card"><div class="icon">🌍</div><h3 data-t="c2t">Multiple languages</h3><p data-t="c2p">Russian, Vietnamese and English — convenient for tourists and local guests.</p></div>
+<div class="card"><div class="icon">🔄</div><h3 data-t="c3t">Easy to update</h3><p data-t="c3p">Changed a price or dish? No need to reprint the whole menu.</p></div>
+<div class="card"><div class="icon">📸</div><h3 data-t="c4t">Photos & descriptions</h3><p data-t="c4p">Show your dishes clearly and help guests choose.</p></div>
+<div class="card"><div class="icon">✨</div><h3 data-t="c5t">Your style</h3><p data-t="c5p">Colors, logo and design can match your restaurant.</p></div>
+<div class="card"><div class="icon">🖨️</div><h3 data-t="c6t">Ready QR code</h3><p data-t="c6p">Place the QR code on tables, at the counter or entrance.</p></div>
 </div></div></section>
 
-<section id="how"><div class="wrap center"><div class="eyebrow">Как это работает</div><h2>От вашего меню до QR-кода — 4 шага.</h2>
-<div class="steps"><div class="step"><div class="num">01</div><h3>Вы отправляете меню</h3><p>Фото, PDF, текст или существующее меню.</p></div><div class="step"><div class="num">02</div><h3>Мы создаём страницу</h3><p>Собираем блюда, цены, фотографии и языки.</p></div><div class="step"><div class="num">03</div><h3>Вы проверяете</h3><p>Исправляем замечания перед запуском.</p></div><div class="step"><div class="num">04</div><h3>Получаете QR</h3><p>Размещаете код на столиках и начинаете использовать.</p></div></div></div></section>
+<section id="how"><div class="wrap center"><div class="eyebrow" data-t="howEyebrow">How it works</div><h2 data-t="howTitle">From your menu to a QR code — 4 steps.</h2>
+<div class="steps"><div class="step"><div class="num">01</div><h3 data-t="s1t">Send your menu</h3><p data-t="s1p">Photos, PDF, text or your existing menu.</p></div><div class="step"><div class="num">02</div><h3 data-t="s2t">We build the page</h3><p data-t="s2p">We add dishes, prices, photos and languages.</p></div><div class="step"><div class="num">03</div><h3 data-t="s3t">You review it</h3><p data-t="s3p">We make corrections before launch.</p></div><div class="step"><div class="num">04</div><h3 data-t="s4t">Get your QR</h3><p data-t="s4p">Put it on tables and start using it.</p></div></div></div></section>
 
-<section id="prices"><div class="wrap center"><div class="eyebrow">Тарифы</div><h2>Выберите подходящий формат.</h2><p class="sub">Можно начать с небольшого меню и расширить его позже.</p>
+<section id="prices"><div class="wrap center"><div class="eyebrow" data-t="priceEyebrow">Prices</div><h2 data-t="priceTitle">Choose the right format.</h2><p class="sub" data-t="priceSub">Start with a small menu and expand later.</p>
 <div class="prices">
-<div class="price"><h3>START</h3><div class="cost">500 000 ₫</div><ul><li>До 30 позиций</li><li>1 язык</li><li>Мобильное меню</li><li>QR-код</li><li>Онлайн-размещение</li></ul><a class="btn light" href="#contact">Заказать</a></div>
-<div class="price featured"><h3>BUSINESS</h3><div class="cost">900 000 ₫</div><ul><li>До 70 позиций</li><li>До 3 языков</li><li>Фотографии и категории</li><li>Индивидуальный дизайн</li><li>QR-код</li><li>1 месяц изменений</li></ul><a class="btn" href="#contact">Выбрать</a></div>
-<div class="price"><h3>PRO</h3><div class="cost">1 500 000 ₫</div><ul><li>До 150 позиций</li><li>3–4 языка</li><li>Индивидуальный дизайн</li><li>Несколько QR-кодов</li><li>3 месяца изменений</li></ul><a class="btn light" href="#contact">Заказать</a></div>
+<div class="price"><h3>START</h3><div class="cost">500 000 ₫</div><ul><li data-t="p1">Up to 30 items</li><li data-t="p2">1 language</li><li data-t="p3">Mobile menu</li><li data-t="p4">QR code</li><li data-t="p5">Online hosting</li></ul><a class="btn light" href="#contact" data-t="order">Order</a></div>
+<div class="price featured"><h3>BUSINESS</h3><div class="cost">900 000 ₫</div><ul><li data-t="p6">Up to 70 items</li><li data-t="p7">Up to 3 languages</li><li data-t="p8">Photos & categories</li><li data-t="p9">Custom design</li><li data-t="p10">QR code</li><li data-t="p11">1 month of updates</li></ul><a class="btn" href="#contact" data-t="choose">Choose</a></div>
+<div class="price"><h3>PRO</h3><div class="cost">1 500 000 ₫</div><ul><li data-t="p12">Up to 150 items</li><li data-t="p13">3–4 languages</li><li data-t="p14">Custom design</li><li data-t="p15">Multiple QR codes</li><li data-t="p16">3 months of updates</li></ul><a class="btn light" href="#contact" data-t="order">Order</a></div>
 </div></div></section>
 
-<section id="contact"><div class="wrap"><div class="cta"><div class="eyebrow">Бесплатный демо-вариант</div><h2>Хотите увидеть своё меню на телефоне?</h2><p>Отправьте нам ваше текущее меню. Мы покажем, как несколько ваших блюд будут выглядеть в электронном QR-меню.</p><div class="actions">
-<a class="btn" href="https://wa.me/84337404600" target="_blank">WhatsApp — получить демо</a>
-<a class="btn" href="https://zalo.me/84337404600" target="_blank">Zalo — получить демо</a>
-</div></div></div></section>
+<section id="contact"><div class="wrap"><div class="cta"><div class="eyebrow" data-t="ctaEyebrow">Free demo</div><h2 data-t="ctaTitle">Want to see your menu on a phone?</h2><p data-t="ctaText">Send us your current menu. We'll show you how a few of your dishes can look in an electronic QR menu.</p>
+<div class="actions"><a class="btn" href="https://wa.me/84337404600" target="_blank" data-t="wa">WhatsApp — get demo</a><a class="btn" href="https://zalo.me/84337404600" target="_blank" data-t="zalo">Zalo — get demo</a></div></div></div></section>
+<footer><div class="wrap" data-t="footer">QR MENU • Electronic menus for restaurants, cafés & bars</div></footer>
 
-<footer><div class="wrap">QR MENU • Electronic menus for restaurants, cafés & bars</div></footer>
+<script>
+const T={
+ru:{
+navHow:"Как работает",navPrices:"Цены",navDemo:"Получить демо",badge:"Для ресторанов • кафе • баров • отелей",
+heroTitle:"Ваше меню — прямо в телефоне гостя.",heroText:"Красивое электронное меню по QR-коду. Без приложений, лишней печати и долгого ожидания.",heroBtn:"Получить бесплатное демо",priceBtn:"Посмотреть тарифы",sampleMenu:"Меню",
+dish1:"Паста с морепродуктами",dish2:"Стейк из говядины",dish3:"Свежие спринг-роллы",dish4:"Манговый смузи",
+whyEyebrow:"Почему QR MENU",whyTitle:"Проще для гостя. Удобнее для бизнеса.",whySub:"Один QR-код превращает столик в точку доступа к актуальному меню.",
+c1t:"Открывается сразу",c1p:"Гость сканирует QR-код камерой телефона — приложение не требуется.",c2t:"Несколько языков",c2p:"Русский, Vietnamese и English — удобно для туристов и местных гостей.",c3t:"Легко обновлять",c3p:"Изменились цены или блюда? Не нужно перепечатывать всё меню.",c4t:"Фото и описания",c4p:"Покажите блюдо так, чтобы гостю было проще выбрать.",c5t:"Ваш стиль",c5p:"Цвета, логотип и оформление можно адаптировать под ваше заведение.",c6t:"Готовый QR-код",c6p:"Размещайте QR-код на столах, стойке или у входа.",
+howEyebrow:"Как это работает",howTitle:"От вашего меню до QR-кода — 4 шага.",s1t:"Вы отправляете меню",s1p:"Фото, PDF, текст или существующее меню.",s2t:"Мы создаём страницу",s2p:"Собираем блюда, цены, фотографии и языки.",s3t:"Вы проверяете",s3p:"Исправляем замечания перед запуском.",s4t:"Получаете QR",s4p:"Размещаете код на столиках и начинаете использовать.",
+priceEyebrow:"Тарифы",priceTitle:"Выберите подходящий формат.",priceSub:"Можно начать с небольшого меню и расширить его позже.",
+p1:"До 30 позиций",p2:"1 язык",p3:"Мобильное меню",p4:"QR-код",p5:"Онлайн-размещение",p6:"До 70 позиций",p7:"До 3 языков",p8:"Фотографии и категории",p9:"Индивидуальный дизайн",p10:"QR-код",p11:"1 месяц изменений",p12:"До 150 позиций",p13:"3–4 языка",p14:"Индивидуальный дизайн",p15:"Несколько QR-кодов",p16:"3 месяца изменений",order:"Заказать",choose:"Выбрать",
+ctaEyebrow:"Бесплатный демо-вариант",ctaTitle:"Хотите увидеть своё меню на телефоне?",ctaText:"Отправьте нам ваше текущее меню. Мы покажем, как несколько ваших блюд будут выглядеть в электронном QR-меню.",wa:"WhatsApp — получить демо",zalo:"Zalo — получить демо",footer:"QR MENU • Электронные меню для ресторанов, кафе и баров"
+},
+en:{
+navHow:"How it works",navPrices:"Prices",navDemo:"Get demo",badge:"For restaurants • cafés • bars • hotels",heroTitle:"Your menu — right on your guest's phone.",heroText:"A beautiful electronic menu opened by QR code. No app, unnecessary printing or waiting.",heroBtn:"Get a free demo",priceBtn:"View prices",sampleMenu:"Menu",
+dish1:"Seafood Pasta",dish2:"Beef Steak",dish3:"Fresh Spring Rolls",dish4:"Mango Smoothie",
+whyEyebrow:"Why QR MENU",whyTitle:"Easier for guests. Better for your business.",whySub:"One QR code turns your table into instant access to an up-to-date menu.",
+c1t:"Opens instantly",c1p:"Guests scan the QR code with their phone camera — no app required.",c2t:"Multiple languages",c2p:"Russian, Vietnamese and English — convenient for tourists and local guests.",c3t:"Easy to update",c3p:"Changed a price or dish? No need to reprint the whole menu.",c4t:"Photos & descriptions",c4p:"Show your dishes clearly and help guests choose.",c5t:"Your style",c5p:"Colors, logo and design can match your restaurant.",c6t:"Ready QR code",c6p:"Place the QR code on tables, at the counter or entrance.",
+howEyebrow:"How it works",howTitle:"From your menu to a QR code — 4 steps.",s1t:"Send your menu",s1p:"Photos, PDF, text or your existing menu.",s2t:"We build the page",s2p:"We add dishes, prices, photos and languages.",s3t:"You review it",s3p:"We make corrections before launch.",s4t:"Get your QR",s4p:"Put it on tables and start using it.",
+priceEyebrow:"Prices",priceTitle:"Choose the right format.",priceSub:"Start with a small menu and expand later.",p1:"Up to 30 items",p2:"1 language",p3:"Mobile menu",p4:"QR code",p5:"Online hosting",p6:"Up to 70 items",p7:"Up to 3 languages",p8:"Photos & categories",p9:"Custom design",p10:"QR code",p11:"1 month of updates",p12:"Up to 150 items",p13:"3–4 languages",p14:"Custom design",p15:"Multiple QR codes",p16:"3 months of updates",order:"Order",choose:"Choose",
+ctaEyebrow:"Free demo",ctaTitle:"Want to see your menu on a phone?",ctaText:"Send us your current menu. We'll show you how a few of your dishes can look in an electronic QR menu.",wa:"WhatsApp — get demo",zalo:"Zalo — get demo",footer:"QR MENU • Electronic menus for restaurants, cafés & bars"
+},
+vi:{
+navHow:"Cách hoạt động",navPrices:"Bảng giá",navDemo:"Nhận demo",badge:"Dành cho nhà hàng • quán cà phê • quán bar • khách sạn",
+heroTitle:"Menu của bạn — ngay trên điện thoại của khách.",heroText:"Menu điện tử đẹp mắt bằng QR code. Không cần tải ứng dụng, không phải in lại nhiều lần.",heroBtn:"Nhận demo miễn phí",priceBtn:"Xem bảng giá",sampleMenu:"Menu",
+dish1:"Mì hải sản",dish2:"Bít tết bò",dish3:"Gỏi cuốn tươi",dish4:"Sinh tố xoài",
+whyEyebrow:"Tại sao QR MENU",whyTitle:"Dễ hơn cho khách. Tiện hơn cho doanh nghiệp.",whySub:"Một QR code giúp khách truy cập ngay vào menu mới nhất.",
+c1t:"Mở ngay lập tức",c1p:"Khách chỉ cần quét QR bằng camera điện thoại — không cần cài ứng dụng.",c2t:"Nhiều ngôn ngữ",c2p:"Tiếng Việt, English và Русский — phù hợp với khách du lịch và khách địa phương.",c3t:"Dễ cập nhật",c3p:"Thay đổi giá hoặc món ăn? Không cần in lại toàn bộ menu.",c4t:"Hình ảnh & mô tả",c4p:"Hiển thị món ăn rõ ràng để khách dễ lựa chọn.",c5t:"Theo phong cách của bạn",c5p:"Màu sắc, logo và thiết kế có thể phù hợp với nhà hàng của bạn.",c6t:"QR code sẵn sàng",c6p:"Đặt QR code trên bàn, quầy hoặc lối vào.",
+howEyebrow:"Cách hoạt động",howTitle:"Từ menu của bạn đến QR code — 4 bước.",s1t:"Gửi menu",s1p:"Ảnh, PDF, nội dung hoặc menu hiện tại.",s2t:"Chúng tôi tạo trang",s2p:"Thêm món ăn, giá, hình ảnh và ngôn ngữ.",s3t:"Bạn kiểm tra",s3p:"Chúng tôi chỉnh sửa trước khi đưa vào sử dụng.",s4t:"Nhận QR",s4p:"Đặt QR trên bàn và bắt đầu sử dụng.",
+priceEyebrow:"Bảng giá",priceTitle:"Chọn gói phù hợp.",priceSub:"Bạn có thể bắt đầu với menu nhỏ và mở rộng sau.",p1:"Tối đa 30 món",p2:"1 ngôn ngữ",p3:"Menu trên điện thoại",p4:"QR code",p5:"Lưu trữ online",p6:"Tối đa 70 món",p7:"Tối đa 3 ngôn ngữ",p8:"Hình ảnh & danh mục",p9:"Thiết kế riêng",p10:"QR code",p11:"1 tháng cập nhật",p12:"Tối đa 150 món",p13:"3–4 ngôn ngữ",p14:"Thiết kế riêng",p15:"Nhiều QR code",p16:"3 tháng cập nhật",order:"Đặt hàng",choose:"Chọn gói",
+ctaEyebrow:"Demo miễn phí",ctaTitle:"Bạn muốn xem menu của mình trên điện thoại?",ctaText:"Gửi menu hiện tại cho chúng tôi. Chúng tôi sẽ làm thử một vài món để bạn xem menu QR điện tử sẽ trông như thế nào.",wa:"WhatsApp — nhận demo",zalo:"Zalo — nhận demo",footer:"QR MENU • Menu điện tử cho nhà hàng, quán cà phê và quán bar"
+}};
+function setLang(lang){
+document.documentElement.lang=lang;
+document.querySelectorAll("[data-t]").forEach(el=>{const k=el.dataset.t;if(T[lang][k]!==undefined)el.textContent=T[lang][k]});
+document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+localStorage.setItem("qrmenu-lang",lang);
+}
+document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+setLang(localStorage.getItem("qrmenu-lang")||"ru");
+</script>
 </body>
 </html>
