@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QR MENU — Электронное меню для ресторана</title>
+<meta name="description" content="Красивое QR-меню для ресторанов, кафе и баров. Русский, английский и вьетнамский языки.">
+<style>
+:root{--bg:#f7f3ec;--card:#fffdf9;--ink:#211d19;--muted:#756d64;--accent:#b36a32;--line:#e7ddd1;--dark:#24201c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:1050px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.14em}.navin a{color:var(--ink);text-decoration:none;font-size:14px;margin-left:20px}
+.btn{display:inline-block;background:var(--dark);color:white!important;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:700}
+.hero{padding:72px 0 52px;text-align:center}
+.badge{display:inline-block;border:1px solid var(--line);padding:7px 12px;border-radius:99px;color:var(--muted);font-size:13px;background:var(--card)}
+h1{font-size:clamp(42px,8vw,78px);line-height:.98;margin:20px auto 18px;max-width:850px;letter-spacing:-.045em}
+.hero p{font-size:19px;color:var(--muted);max-width:670px;margin:0 auto 28px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn.light{background:var(--card)!important;color:var(--ink)!important;border:1px solid var(--line)}
+.mock{margin:42px auto 0;max-width:420px;background:var(--dark);padding:14px;border-radius:30px;box-shadow:0 25px 60px rgba(40,30,20,.18)}
+.phone{background:#fffaf4;border-radius:20px;padding:25px;text-align:left}
+.phone .mini{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em}
+.phone h3{font-size:27px;margin:7px 0 16px}.dish{padding:13px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}.dish b{white-space:nowrap}
+section{padding:65px 0}.center{text-align:center}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:9px 0 15px;letter-spacing:-.03em}.sub{color:var(--muted);max-width:650px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}.icon{font-size:28px}.card h3{margin:11px 0 6px}.card p{color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.num{font-weight:900;font-size:30px;color:var(--accent)}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.price{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}.price.featured{border:2px solid var(--accent);transform:translateY(-5px)}.price h3{margin:0}.cost{font-size:34px;font-weight:900;margin:10px 0}.price ul{padding-left:20px;color:var(--muted)}.price li{margin:7px 0}
+.cta{background:var(--dark);color:white;border-radius:28px;padding:50px 25px;text-align:center}.cta p{color:#d5cec5;max-width:600px;margin:0 auto 25px}.cta .btn{background:#fff;color:var(--dark)!important}
+footer{padding:35px 0 55px;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:760px){.navin a:not(.btn){display:none}.grid,.prices{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.price.featured{transform:none}.hero{padding-top:55px}.hero p{font-size:17px}}
+@media(max-width:430px){.steps{grid-template-columns:1fr}.navin{height:58px}.btn{padding:12px 15px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navin"><div class="logo">QR MENU</div><div><a href="#how">Как работает</a><a href="#prices">Цены</a><a class="btn" href="#contact">Получить демо</a></div></div></nav>
+
+<header class="hero wrap">
+<span class="badge">Для ресторанов • кафе • баров • отелей</span>
+<h1>Ваше меню — прямо в телефоне гостя.</h1>
+<p>Красивое электронное меню по QR-коду. Без приложений, лишней печати и долгого ожидания.</p>
+<div class="actions"><a class="btn" href="#contact">Получить бесплатное демо</a><a class="btn light" href="#prices">Посмотреть тарифы</a></div>
+<div class="mock"><div class="phone"><div class="mini">Restaurant • Nha Trang</div><h3>Menu</h3><div class="dish"><span>Seafood Pasta</span><b>180K</b></div><div class="dish"><span>Beef Steak</span><b>250K</b></div><div class="dish"><span>Fresh Spring Rolls</span><b>95K</b></div><div class="dish"><span>Mango Smoothie</span><b>70K</b></div></div></div>
+</header>
+
+<section><div class="wrap center"><div class="eyebrow">Почему QR MENU</div><h2>Проще для гостя. Удобнее для бизнеса.</h2><p class="sub">Один QR-код превращает обычный столик в точку доступа к актуальному меню.</p>
+<div class="grid">
+<div class="card"><div class="icon">📱</div><h3>Открывается сразу</h3><p>Гость сканирует QR-код камерой телефона — приложение не требуется.</p></div>
+<div class="card"><div class="icon">🌍</div><h3>Несколько языков</h3><p>Русский, Vietnamese и English — удобно для туристов и местных гостей.</p></div>
+<div class="card"><div class="icon">🔄</div><h3>Легко обновлять</h3><p>Изменились цены или блюда? Не нужно перепечатывать всё меню.</p></div>
+<div class="card"><div class="icon">📸</div><h3>Фото и описания</h3><p>Покажите блюдо так, чтобы гостю было проще выбрать.</p></div>
+<div class="card"><div class="icon">✨</div><h3>Ваш стиль</h3><p>Цвета, логотип и оформление можно адаптировать под ваше заведение.</p></div>
+<div class="card"><div class="icon">🖨️</div><h3>Готовый QR</h3><p>Получаете QR-код, который можно разместить на столах, стойке или у входа.</p></div>
+</div></div></section>
+
+<section id="how"><div class="wrap center"><div class="eyebrow">Как это работает</div><h2>От вашего меню до QR-кода — 4 шага.</h2>
+<div class="steps"><div class="step"><div class="num">01</div><h3>Вы отправляете меню</h3><p>Фото, PDF, текст или существующее меню.</p></div><div class="step"><div class="num">02</div><h3>Мы создаём страницу</h3><p>Собираем блюда, цены, фотографии и языки.</p></div><div class="step"><div class="num">03</div><h3>Вы проверяете</h3><p>Исправляем замечания перед запуском.</p></div><div class="step"><div class="num">04</div><h3>Получаете QR</h3><p>Размещаете код на столиках и начинаете использовать.</p></div></div></div></section>
+
+<section id="prices"><div class="wrap center"><div class="eyebrow">Тарифы</div><h2>Выберите подходящий формат.</h2><p class="sub">Можно начать с небольшого меню и расширить его позже.</p>
+<div class="prices">
+<div class="price"><h3>START</h3><div class="cost">500 000 ₫</div><ul><li>До 30 позиций</li><li>1 язык</li><li>Мобильное меню</li><li>QR-код</li><li>Онлайн-размещение</li></ul><a class="btn light" href="#contact">Заказать</a></div>
+<div class="price featured"><h3>BUSINESS</h3><div class="cost">900 000 ₫</div><ul><li>До 70 позиций</li><li>До 3 языков</li><li>Фотографии и категории</li><li>Индивидуальный дизайн</li><li>QR-код</li><li>1 месяц изменений</li></ul><a class="btn" href="#contact">Выбрать</a></div>
+<div class="price"><h3>PRO</h3><div class="cost">1 500 000 ₫</div><ul><li>До 150 позиций</li><li>3–4 языка</li><li>Индивидуальный дизайн</li><li>Несколько QR-кодов</li><li>3 месяца изменений</li></ul><a class="btn light" href="#contact">Заказать</a></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="cta"><div class="eyebrow">Бесплатный демо-вариант</div><h2>Хотите увидеть своё меню на телефоне?</h2><p>Отправьте нам ваше текущее меню. Мы покажем, как несколько ваших блюд будут выглядеть в электронном QR-меню.</p><a class="btn" href="https://wa.me/" target="_blank">Написать и получить демо</a></div></div></section>
+
+<footer><div class="wrap">QR MENU • Electronic menus for restaurants, cafés & bars</div></footer>
+</body>
+</html>
